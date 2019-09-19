@@ -21,8 +21,8 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    padding-inline-start: 10em;
-    padding-inline-end: 10em;
+    padding-inline-start: 8em;
+    padding-inline-end: 8em;
 }
 
 
@@ -31,8 +31,9 @@ body {
     color: rgb(230, 7, 7);
 }
 
-
-
+.header nav ul li {
+    font-size: 20px;
+}
 .src-only {
     display: none;
 }
@@ -42,8 +43,7 @@ body {
 }
 
 p{
-    font-size: 0.75em;
-    padding: 1rem;
+    padding: 0;
     line-height: 25px;
 }
 
@@ -83,7 +83,8 @@ p{
 }
 
 .big-hero p {
-    font-size: 0.7em;;
+    padding-bottom: 0;
+    font-size: 0.95em;
     color: #D7DEE6;
 }
 
@@ -109,42 +110,48 @@ p{
 .social-links{
     list-style: none;
     padding: 0;
-    margin-top: 3em;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 5em;
+    height: 4em;
     padding-inline-start: 0;
 }
 
 .social-links li{
-    height: inherit;
+    height:unset;
 }
 
 .social-links li a{
     color: #D7DEE6;
     text-decoration: none;
-    font-size: 2.5em;
+    font-size: 8em;
 
     display: flex;
-    font-size: 8em;
     align-items:flex-start;
-    margin: 0.1em;
+    margin: 15px 15px 0px;
 }
 
  .hide-mobile  {
-    padding: 1em;
     border-radius: 100%;
-    cursor: pointer;
-    color: white;
-    font-size: 1.5em;
-    transition: 500ms ease all;
+    color:#0AC693;
+    font-size: 0.8em;
+    padding-bottom: 0;
  }
+ 
+
+ a.hide-mobile.show-desktop{
+     font-size: 8em;
+     cursor: pointer;
+ }
+ 
 .green-area {
     background-color: #0AC693; 
 }
-
-
+/* modificando los article con flex */
+.green-area.post article{
+    display: flexbox;
+    box-sizing: border-box;
+}
 .post {
     padding: 1em;
     margin-bottom: -2px;
@@ -152,18 +159,22 @@ p{
 .post h2 {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.125em;
+    font-size: 1.3em;
     margin: 1em;
 }
 
 .post ul {
     list-style: none;
+    align-content: center;
+    align-items: center;
 }
 
 .post ul li {
     min-height: 300px;
     max-width: 350px;
     margin: 2rem auto;
+    display: flexbox;
+    align-items: center
 }
 
 .post ul li article {
@@ -171,7 +182,8 @@ p{
     border-radius: 10px;
     background-color: #ffffff;
     text-align: left;
-    padding-bottom: 2em;
+    padding-bottom: 2.5em;
+    justify-content: center;
 }
 
 .post article img{
@@ -179,12 +191,14 @@ p{
     width: 100%;
     object-fit: cover;
 }
-
+.post  ul li article:hover{
+    background-color:#0AC693
+} 
 .post article h3 {
     color: #0D5061;
     margin-top: 2em;
     padding: 0em 1rem;
-    font-size: 0.9em;
+    font-size: 1.2em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -192,15 +206,21 @@ p{
 
 .post article p {
     color:#112935;
-    font-size: 0.75em;
+    font-size: 14px;
     padding: 1rem;
     line-height: 25px;
 }
 
 /* About */
-
+.container.bio-info{
+    display:inline-flexbox;
+}
 .about{
     margin-top: 2em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 .about h2 {
@@ -217,7 +237,7 @@ p{
 .bio-info p{
     font-size: 16px;
     padding: 2em;
-    text-align: left;
+    text-align:left;
     line-height: 25px;
     letter-spacing: 2px;
 }
@@ -227,6 +247,11 @@ p{
     flex-direction: column;
     text-align: left;
     padding: 0px 1em;
+
+    grid-row-start: 2;
+    grid-column-start:2 ;
+    grid-column-end:auto;
+    grid-row-end:auto
 }
 
 .contact * + * {
@@ -263,6 +288,7 @@ p{
     font-weight: 400;
     color: white;
     font-size: 1rem;
+    width: 15em;
 }
 
 .black-decoration{
@@ -275,8 +301,10 @@ footer{
 }
 
 footer .social-links {
-    margin: 0;
+    margin: 3em;
 }
+ 
+
 
 .menu {
     background-color: #112935;
@@ -355,8 +383,74 @@ footer .social-links {
 @media only screen and (min-width: 1024px) {
 
        /*TODO: FALTA CSS */
+.header{
+    padding: 0;
+    justify-content: space-between;
+    margin: 0 6em 0 6em;
+}
 
+.social-links{
+    font-size: 2em;
+    margin: 0.3em;
+}
 
+.contact{
+    padding: 1.5em 2em;
+}
+
+.bio-info{
+    padding: 1.5em 2em
+}
+
+footer.social-links{
+    height: 3em;
+}
+
+.logo{
+    width: 150px;
+    margin-top: 2em;
+}
+
+.big-hero{
+    font-size: 1.2em;
+}
+
+.post{
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+/* grid para dividir el container en dos columnas*/
+
+.about>.container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(500px, 1fr));
+    grid-gap: 10px;
+}
+
+.about>.container>h2{
+    grid-area: span 1 / span 2;
+    font-size: 16px
+}
+
+.about .contact, .about .bio-info{
+    padding: 2em;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.about .contact-form{
+    width: 80%;
+    font-weight: bold;
+    font-size: 16px
+
+}
+
+/*Cambiando tamaño del boton de contactar en el formulario de contacto de la seccion about*/
+
+.about .contact-form input[type="submit"]{
+    width: 35%;
+}
 
 }
 
@@ -368,4 +462,79 @@ footer .social-links {
         margin: 0 auto;
         max-width: 1440px;
     }
+
+    .header {
+        margin: 0.2em 9em;
+      }
+    
+      /*Seccion Post desktop*/
+      .post {
+        padding: 1em;
+        margin: 0;
+      }
+    
+      .post ul {
+        margin: 0 0 1em;
+        display: flex;
+        flex-wrap: nowrap; /*Permite ubicar los objetos en una sola columna*/
+        list-style: none;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+      }
+    
+      .post ul li {
+        min-height: 120px;
+        min-width: 33.33%;
+        margin: 0 0.3em 2em;
+      }
+    
+      .post ul li article {
+        overflow: hidden;
+        min-height: 100%;
+        border-radius: 10px;      
+        background-color: #ffffff;
+        text-align: left;
+        margin: 1em 1em;
+      }
+    
+      .post article h3 {
+        white-space: nowrap;
+      }
+    
+      .post article p {
+        font-size: 0.75em;
+      }
+    
+      .about .container{
+          display: flex;
+          flex-flow: row wrap; 
+          width: 100%;
+          justify-content: center;
+          margin-left: 0;
+      }
+    
+      .about .container h2{
+          width: 100%;
+          font-size: 1.3rem;
+          margin: 1em 0em 2em;
+      }
+    
+      .about .container>div{
+        width: 42%;
+        padding: 0em 4em;
+        margin-left: 1em;
+      }
+
+      .bio-info img{    
+        width: 225px;
+      }
+    
+      .bio-info p{
+        line-height: 40px;
+      }
+    
+      .contact-form input[type="submit"] {    
+        width: 50%; /*Disminuir tamaño del botón submit*/
+      }
+    
 }
