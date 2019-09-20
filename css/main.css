@@ -358,7 +358,7 @@ footer .social-links {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+       
     }
     
     .post ul li {
@@ -540,7 +540,6 @@ footer.social-links{
         display: flex;
         flex-wrap: nowrap; 
         list-style: none;
-        justify-content: space-around;
         padding-left: 2.5em;
         padding-right: 2.5em;
       }
@@ -567,6 +566,7 @@ footer.social-links{
       .post article p {
         font-size: 0.75em;
       }
+
     
       .about .container{
           display: flex;
