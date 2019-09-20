@@ -102,7 +102,7 @@ p{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 72vh;
+    height: 70vh;
 
 }
 
@@ -226,7 +226,7 @@ p{
 .about h2 {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.125em;
+    font-size: 1.2em;
     margin: 2em;
 }
 
@@ -235,7 +235,7 @@ p{
 }
 
 .bio-info p{
-    font-size: 16px;
+    font-size: 14px;
     padding: 2em;
     text-align:left;
     line-height: 25px;
@@ -298,18 +298,17 @@ p{
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
+    font-size: x-small
 }
 
 footer .social-links {
-    margin: 1em;
+    margin: 1.3em;
 }
  
-
 
 .menu {
     background-color: #112935;
     position: absolute;
-    z-index: 20;
     top: 60px;
     right: 0;
     width: 100vw;
@@ -341,31 +340,44 @@ footer .social-links {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 80%;
-        height: 100vh;
+        width: 100%;
+        height: 45vh;
+        font-size: 12px
     }
 
     .big-hero img {
-        width: 150px;
-        margin-top: -56px;
+        width: 100px;
     }
   
-.bio-info img {
-    width: 150px;
-    margin-bottom: 1em;
-  }
+    .bio-info img {
+        width: 150px;
+        margin-bottom: 1em;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding-inline-start: 4em;
+        padding-inline-end: 4em;
+    }
+    .header nav ul li {
+        font-size: 10px;
+    }
     .post ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-       
+    }
+    .post h2{
+        font-size: 0.7em
     }
     
     .post ul li {
-        min-height: 350px;
-        max-height: 3500px;
+        min-height: 300px;
+        max-height: 3000px;
         margin: 1rem 2rem;
         flex: 1 0 300px;
+        font-size: 12px;
     }
 
 
@@ -398,18 +410,29 @@ footer .social-links {
         padding: 0;
         display: flex;
         justify-content: center;
-        height: 5em;
+        height: 4em;
         align-items: flex-start;
     }
-
+    .social-links li a{
+        font-size: 5em
+    }
     .about .container{
         width: 75%;
         justify-content: center;
         margin-left: 0;
-        font-size: 16px
+        font-size: 10px;
+        height: 50%;
+        font-weight: bold
+    }
+
+    .about h2{
+        font-size: 2.2em
+    }
+    .contact-form {
+        font-size: 10px
     }
     .about .contact-form input[type="submit"]{
-        width: 35%;
+        width: 40%;
     }
 
 
@@ -447,15 +470,6 @@ footer .social-links {
     padding: 1.5em 2em
 }
 
-footer.social-links{
-    height: 2em;
-}
-
-.logo{
-    width: 150px;
-    margin-top: 2em;
-}
-
 .big-hero{
     font-size: 1.2em;
 }
@@ -466,7 +480,6 @@ footer.social-links{
 }
 
 /* grid para dividir el container en dos columnas*/
-
 .about>.container{
     display: grid;
     grid-template-columns: repeat(2, minmax(500px, 1fr));
@@ -485,7 +498,7 @@ footer.social-links{
 }
 
 .about .contact-form{
-    width: 80%;
+    width: 75%;
     font-weight: bold;
     font-size: 16px
 
@@ -540,7 +553,7 @@ footer.social-links{
         display: flex;
         flex-wrap: nowrap; 
         list-style: none;
-        padding-left: 2.5em;
+        padding-left: 3.5em;
         padding-right: 2.5em;
       }
     
