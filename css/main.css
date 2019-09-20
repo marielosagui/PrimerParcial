@@ -21,8 +21,8 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    padding-inline-start: 8em;
-    padding-inline-end: 8em;
+    padding-inline-start: 6em;
+    padding-inline-end: 6em;
 }
 
 
@@ -49,7 +49,7 @@ p{
 
 .logo {
     width: 90px;
-    margin: 1.8em;
+    margin: 1em;
 }
 
 .options {
@@ -102,7 +102,7 @@ p{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 85vh;
+    height: 72vh;
 
 }
 
@@ -111,10 +111,10 @@ p{
     list-style: none;
     padding: 0;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     height: 4em;
-    padding-inline-start: 0;
+    align-items: flex-start;
+    
 }
 
 .social-links li{
@@ -301,7 +301,7 @@ footer{
 }
 
 footer .social-links {
-    margin: 3em;
+    margin: 1em;
 }
  
 
@@ -336,6 +336,24 @@ footer .social-links {
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
   
+    .big-hero div.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+    }
+
+    .big-hero img {
+        width: 150px;
+        margin-top: -56px;
+    }
+  
+.bio-info img {
+    width: 150px;
+    margin-bottom: 1em;
+  }
     .post ul {
         list-style: none;
         display: flex;
@@ -375,6 +393,24 @@ footer .social-links {
     }
 
 
+    .social-links{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        height: 5em;
+        align-items: flex-start;
+    }
+
+    .about .container{
+        width: 75%;
+        justify-content: center;
+        margin-left: 0;
+        font-size: 16px
+    }
+    .about .contact-form input[type="submit"]{
+        width: 35%;
+    }
 
 
     /*TODO: FALTA CSS */
@@ -382,6 +418,15 @@ footer .social-links {
 
 @media only screen and (min-width: 1024px) {
 
+    .big-hero div.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 85vh;
+    
+    }
        /*TODO: FALTA CSS */
 .header{
     padding: 0;
@@ -403,7 +448,7 @@ footer .social-links {
 }
 
 footer.social-links{
-    height: 3em;
+    height: 2em;
 }
 
 .logo{
@@ -445,7 +490,14 @@ footer.social-links{
     font-size: 16px
 
 }
-
+.social-links{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 3em;
+    align-items: flex-start;
+}
 /*Cambiando tamaño del boton de contactar en el formulario de contacto de la seccion about*/
 
 .about .contact-form input[type="submit"]{
@@ -456,6 +508,16 @@ footer.social-links{
 
 @media only screen and (min-width: 1440px) {
 
+
+    .big-hero div.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 85vh;
+    
+    }
     /*TODO: FALTA CSS */
     .container {
         width: 80%;
@@ -467,7 +529,7 @@ footer.social-links{
         margin: 0.2em 9em;
       }
     
-      /*Seccion Post desktop*/
+      /**/
       .post {
         padding: 1em;
         margin: 0;
@@ -476,8 +538,9 @@ footer.social-links{
       .post ul {
         margin: 0 0 1em;
         display: flex;
-        flex-wrap: nowrap; /*Permite ubicar los objetos en una sola columna*/
+        flex-wrap: nowrap; 
         list-style: none;
+        justify-content: space-around;
         padding-left: 2.5em;
         padding-right: 2.5em;
       }
@@ -534,7 +597,11 @@ footer.social-links{
       }
     
       .contact-form input[type="submit"] {    
-        width: 50%; /*Disminuir tamaño del botón submit*/
+        width: 40%; /*Disminuir tamaño del botón submit*/
+      }
+
+      footer.social-links li{
+          margin-top: 1em;
       }
     
 }
