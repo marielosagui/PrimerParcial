@@ -32,7 +32,7 @@ body {
 }
 
 .header nav ul li {
-    font-size: 20px;
+    font-size: 15px;
 }
 .src-only {
     display: none;
@@ -45,6 +45,7 @@ body {
 p{
     padding: 0;
     line-height: 25px;
+    font-size: 16px;
 }
 
 .logo {
@@ -142,6 +143,8 @@ p{
  a.hide-mobile.show-desktop{
      font-size: 8em;
      cursor: pointer;
+     padding-block-end: 0.3em;
+     transition: 500ms ease all;
  }
  
 .green-area {
@@ -171,7 +174,7 @@ p{
 
 .post ul li {
     min-height: 300px;
-    max-width: 350px;
+    max-width: 290px;
     margin: 2rem auto;
     display: flexbox;
     align-items: center
@@ -198,7 +201,7 @@ p{
     color: #0D5061;
     margin-top: 2em;
     padding: 0em 1rem;
-    font-size: 1.2em;
+    font-size: 1.0em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -373,8 +376,8 @@ footer .social-links {
     }
     
     .post ul li {
-        min-height: 300px;
-        max-height: 3000px;
+        min-height: 250px;
+        max-height: 1000px;
         margin: 1rem 2rem;
         flex: 1 0 300px;
         font-size: 12px;
@@ -417,7 +420,7 @@ footer .social-links {
         font-size: 5em
     }
     .about .container{
-        width: 75%;
+        width: 85%;
         justify-content: center;
         margin-left: 0;
         font-size: 10px;
@@ -446,8 +449,9 @@ footer .social-links {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        font-size: 16px;
         width: 100%;
-        height: 85vh;
+        height: 86vh;
     
     }
        /*TODO: FALTA CSS */
@@ -456,7 +460,9 @@ footer .social-links {
     justify-content: space-between;
     margin: 0 6em 0 6em;
 }
-
+.header nav ul li {
+    font-size: 20px;
+}
 .social-links{
     font-size: 2em;
     margin: 0.3em;
@@ -479,6 +485,13 @@ footer .social-links {
     padding-right: 4em;
 }
 
+.big-hero img {
+    width: 180px;
+}
+
+.post h2 {
+    font-size: 1.3em;
+}
 /* grid para dividir el container en dos columnas*/
 .about>.container{
     display: grid;
@@ -498,7 +511,7 @@ footer .social-links {
 }
 
 .about .contact-form{
-    width: 75%;
+    width: 85%;
     font-weight: bold;
     font-size: 16px
 
@@ -528,7 +541,8 @@ footer .social-links {
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 85vh;
+        font-size: 16px;
+        height: 95vh;
     
     }
     /*TODO: FALTA CSS */
