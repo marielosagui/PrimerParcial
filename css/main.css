@@ -126,7 +126,7 @@ p{
     padding-bottom: 0;
  }
  */
-
+/*personalizacion de flecha*/
  a.hide-mobile.show-desktop{
      font-size: 8em;
      color: #0AC693;
@@ -304,14 +304,12 @@ footer .social-links {
     top: 60px;
     right: 0;
     width: 100vw;
-    height: calc(100vh - 60px);
-}
-
-.menu {
     list-style: none;
     text-align: left;
     padding: 1em;
+    height: calc(100vh - 60px);
 }
+
 .menu li {
     display: block;
     padding: 0.5em;
@@ -322,7 +320,6 @@ footer .social-links {
     color: white;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    
 }
 
 /*cambio color rojo al ultimo hijo nav*/
@@ -334,6 +331,7 @@ footer .social-links {
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
   
+    /*adapto al tamanio de tablet*/
     .big-hero div.container {
         display: flex;
         flex-direction: column;
@@ -423,6 +421,7 @@ footer .social-links {
         font-size: 12px;
         padding: 2px 4em;
     }
+    /*boton contactar*/
     .about .contact-form input[type="submit"]{
         width: 30%;
     }
