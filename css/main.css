@@ -21,19 +21,10 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    padding-inline-start: 6em;
-    padding-inline-end: 6em;
+    padding-inline-start: 3em;
+    padding-inline-end: 3em;
 }
 
-
-/*cambio color rojo al ultimo hijo nav*/
-.header nav ul li:last-child a{
-    color: rgb(230, 7, 7);
-}
-
-.header nav ul li {
-    font-size: 15px;
-}
 .src-only {
     display: none;
 }
@@ -43,7 +34,7 @@ body {
 }
 
 p{
-    padding: 0;
+    padding: 0.5rem;
     line-height: 25px;
     font-size: 16px;
 }
@@ -73,7 +64,8 @@ p{
 /* Big area */
 
 .big-hero img {
-    width: 150px;
+    width: 140px;
+    margin-top: -3.3em;
 }
 
 .big-hero h2 {
@@ -89,21 +81,14 @@ p{
     color: #D7DEE6;
 }
 
-
-/*Aumentando el tamaño del espacio de big-area
-.big-hero div.container a.hide-mobile{
-    font-size: 2em;
-    color:  #0AC693;
-    height:7.5em ;
-}*/
-
+/*adapto la pantalla al dispositivo*/
 .big-hero div.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 70vh;
+    height: 68vh;
 
 }
 
@@ -111,6 +96,7 @@ p{
 .social-links{
     list-style: none;
     padding: 0;
+    margin-top: none;
     display: flex;
     justify-content: center;
     height: 4em;
@@ -120,6 +106,7 @@ p{
 
 .social-links li{
     height:unset;
+    margin-top: -0.7em;
 }
 
 .social-links li a{
@@ -131,17 +118,18 @@ p{
     align-items:flex-start;
     margin: 15px 15px 0px;
 }
-
+/*
  .hide-mobile  {
     border-radius: 100%;
     color:#0AC693;
     font-size: 0.8em;
     padding-bottom: 0;
  }
- 
+ */
 
  a.hide-mobile.show-desktop{
      font-size: 8em;
+     color: #0AC693;
      cursor: pointer;
      padding-block-end: 0.3em;
      transition: 500ms ease all;
@@ -168,15 +156,15 @@ p{
 
 .post ul {
     list-style: none;
-    align-content: center;
-    align-items: center;
+    /*align-content: center;
+    align-items: center;*/
 }
 
 .post ul li {
     min-height: 300px;
     max-width: 290px;
     margin: 2rem auto;
-    display: flexbox;
+    display: flex;
     align-items: center
 }
 
@@ -186,7 +174,7 @@ p{
     background-color: #ffffff;
     text-align: left;
     padding-bottom: 2.5em;
-    justify-content: center;
+    width: 96%;
 }
 
 .post article img{
@@ -236,6 +224,7 @@ p{
 .bio-info img{
    width: 200px;
 }
+
 
 .bio-info p{
     font-size: 14px;
@@ -301,7 +290,7 @@ p{
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
-    font-size: x-small
+    font-size: 0.6em
 }
 
 footer .social-links {
@@ -332,8 +321,15 @@ footer .social-links {
 .menu li a {
     color: white;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
     
 }
+
+/*cambio color rojo al ultimo hijo nav*/
+.menu li:last-child a{
+    color: rgb(230, 7, 7);
+}
+
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
@@ -344,28 +340,23 @@ footer .social-links {
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 45vh;
-        font-size: 12px
+        height: 44vh;
+        font-size: 10px
     }
 
     .big-hero img {
-        width: 100px;
+        width: 130px;
     }
   
     .bio-info img {
-        width: 150px;
-        margin-bottom: 1em;
+        width: 140px;
+        margin-bottom: 0em;
     }
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        padding-inline-start: 4em;
-        padding-inline-end: 4em;
-    }
     .header nav ul li {
-        font-size: 10px;
+        font-size: 9px;
     }
+    
     .post ul {
         list-style: none;
         display: flex;
@@ -428,18 +419,14 @@ footer .social-links {
         font-weight: bold
     }
 
-    .about h2{
-        font-size: 2.2em
-    }
-    .contact-form {
-        font-size: 10px
+    .contact-form{
+        font-size: 12px;
+        padding: 2px 4em;
     }
     .about .contact-form input[type="submit"]{
-        width: 40%;
+        width: 30%;
     }
 
-
-    /*TODO: FALTA CSS */
 } 
 
 @media only screen and (min-width: 1024px) {
@@ -449,49 +436,44 @@ footer .social-links {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: 16px;
+        font-size: 12px;
         width: 100%;
-        height: 86vh;
+        height: 75vh;
     
     }
-       /*TODO: FALTA CSS */
+      
 .header{
     padding: 0;
     justify-content: space-between;
-    margin: 0 6em 0 6em;
-}
-.header nav ul li {
-    font-size: 20px;
-}
-.social-links{
-    font-size: 2em;
-    margin: 0.3em;
+    margin: 0 4em 0 4em;
 }
 
-.contact{
-    padding: 1.5em 2em;
+
+.post ul {
+   justify-content: center;
 }
 
-.bio-info{
-    padding: 1.5em 2em
-}
-
-.big-hero{
-    font-size: 1.2em;
-}
-
-.post{
-    padding-left: 4em;
-    padding-right: 4em;
-}
 
 .big-hero img {
-    width: 180px;
+    width: 130px;
+    margin-top: 1em
 }
 
 .post h2 {
-    font-size: 1.3em;
+    font-size: 16px;
 }
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.post ul li {
+    margin: 1rem 0.4rem;
+    flex: 1 0 300px;
+    font-size: 10px;
+}
+
 /* grid para dividir el container en dos columnas*/
 .about>.container{
     display: grid;
@@ -505,35 +487,26 @@ footer .social-links {
 }
 
 .about .contact, .about .bio-info{
-    padding: 2em;
+    padding: 1em;
     align-items: center;
     font-size: 0.8rem;
 }
 
 .about .contact-form{
-    width: 85%;
+    width: 95%;
     font-weight: bold;
     font-size: 16px
 
 }
-.social-links{
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    height: 3em;
-    align-items: flex-start;
-}
-/*Cambiando tamaño del boton de contactar en el formulario de contacto de la seccion about*/
 
+/*Cambiando tamaño del boton de contactar */
 .about .contact-form input[type="submit"]{
-    width: 35%;
+    width: 75%;
 }
 
 }
 
-@media only screen and (min-width: 1440px) {
-
+@media only screen and (min-width: 1440px)  {
 
     .big-hero div.container {
         display: flex;
@@ -542,41 +515,19 @@ footer .social-links {
         justify-content: center;
         width: 100%;
         font-size: 16px;
-        height: 95vh;
+        height: 50vh;
     
     }
-    /*TODO: FALTA CSS */
+
     .container {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         max-width: 1440px;
     }
 
-    .header {
-        margin: 0.2em 9em;
-      }
-    
-      /**/
-      .post {
-        padding: 1em;
-        margin: 0;
-      }
-    
-      .post ul {
-        margin: 0 0 1em;
-        display: flex;
-        flex-wrap: nowrap; 
-        list-style: none;
-        padding-left: 3.5em;
-        padding-right: 2.5em;
-      }
-    
-      .post ul li {
-        min-height: 120px;
-        min-width: 33.33%;
-        margin: 0 0.3em 2em;
-      }
-    
+    .post ul {
+        justify-content: center;
+    }
       .post ul li article {
         overflow: hidden;
         min-height: 100%;
@@ -587,48 +538,52 @@ footer .social-links {
       }
     
       .post article h3 {
-        white-space: nowrap;
+        font-size: 16px;
       }
     
       .post article p {
-        font-size: 0.75em;
+        font-size: 14px;
       }
 
     
       .about .container{
           display: flex;
+          flex-direction: row;
           flex-flow: row wrap; 
-          width: 100%;
+          width: 90%;
           justify-content: center;
           margin-left: 0;
       }
     
       .about .container h2{
-          width: 100%;
-          font-size: 1.3rem;
-          margin: 1em 0em 2em;
+          width: 80%;
+          font-size: 1rem;
+          margin: 1em 1em 2em;
       }
     
       .about .container>div{
-        width: 42%;
-        padding: 0em 4em;
+        width: 45%;
+        padding: 0em 1em;
         margin-left: 1em;
       }
 
       .bio-info img{    
-        width: 225px;
+        width: 160px;
       }
     
       .bio-info p{
-        line-height: 40px;
+        line-height: 33px;
+        font-size: 12px;
       }
     
-      .contact-form input[type="submit"] {    
-        width: 40%; /*Disminuir tamaño del botón submit*/
-      }
-
-      footer.social-links li{
-          margin-top: 1em;
-      }
+      .about .contact-form{
+        width: 100%;
+        font-weight: bold;
+        font-size: 14px
+    
+    }
+      .about .contact-form input[type="submit"]{
+        width: 85%;
+    }
     
 }
